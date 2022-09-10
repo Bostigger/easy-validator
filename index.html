@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Form Validator</h1>
+    <h3 style="color: #ff0000" id="message"></h3>
+    <form action="" id="form" novalidate>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text"  id="name" name="fname" placeholder="Stigger Blayn" required minlength="3" maxlength="100">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email"  id="email" name="email" placeholder="bostigger@github.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel"  id="phone" name="phone" placeholder="055-909-9224" required pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text"  id="address" name="address" placeholder="Michangan Street" required>
+        </div>
+        <div class="form-group">
+            <label for="website">Website Url</label>
+            <input type="url"  id="website" name="weburl" placeholder="https://github.com" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Enter Password</label>
+            <input type="password"  id="password" name="password" placeholder="8 characters " required
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$" title="include uppercase , lowercase, one special character"
+            >
+        </div>
+        <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password"  id="cpassword" name="cpassword" placeholder="8 characters " required
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$" title="include uppercase , lowercase, one special character"
+            >
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
